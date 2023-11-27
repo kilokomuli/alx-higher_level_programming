@@ -1,2 +1,2 @@
-Sprint 3
+Section 2
 Python programming
