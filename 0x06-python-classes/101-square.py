@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+""" defines class square """
+
+
 class Square:
-    """Defines a square"""
+    """ instanciates square and gives it
+    properties
+    Attributes:
+        size : size of thw square
+        position"""
     def __init__(self, size=0, position=(0, 0)):
         """Initialises the data"""
         self.size = size
