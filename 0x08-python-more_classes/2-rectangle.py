@@ -17,6 +17,7 @@ class Rectangle:
         attribute width
         """
         return self._width
+
     def width(self, value):
         """
         propety setter
