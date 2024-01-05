@@ -8,8 +8,8 @@ class Rectangle:
         """
         instantiates with optional width and height
         """
-        self.width = width
         self.height = height
+        self.width = width
 
     def width(self):
         """ property to retrieve private attribute width """
