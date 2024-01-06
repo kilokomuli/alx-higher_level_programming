@@ -21,9 +21,10 @@ class Rectangle:
             width : width of rectangle. Defaults to 0.
             height : height of rectangle. Defaults to 0.
         """
+
+        type(self).number_of_instances += 1
         self.height = height
         self.width = width
-        type(self).number_of_instances += 1
 
     @property
     def width(self):
