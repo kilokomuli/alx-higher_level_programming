@@ -4,6 +4,7 @@
 
 class Rectangle:
     """ represents rectangle """
+
     def __init__(self, width=0, height=0):
         """
         instantiates with optional width and height
