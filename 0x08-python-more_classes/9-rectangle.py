@@ -124,8 +124,8 @@ class Rectangle:
 
     def __del__(self):
         """ deletes instance of a rectangle """
-        print("{:s}".format("Bye rectangle..."))
         type(self).number_of_instances -= 1
+        print("{:s}".format("Bye rectangle..."))
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
