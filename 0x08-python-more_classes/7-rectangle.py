@@ -10,6 +10,10 @@ class Rectangle:
         width : width of the rectangle.
         height : height of the rectangle.
     """
+
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Creates new instances of Rectangle.
 
@@ -19,6 +23,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -95,7 +100,7 @@ class Rectangle:
 
         for i in range(self.__height):
             for j in range(self.__width):
-                rectangle.append("#")
+                rectangle.append(str(self.print_symbol))
             rectangle.append("\n")
 
         rectangle.pop()
@@ -113,3 +118,4 @@ class Rectangle:
     def __del__(self):
         """ deletes instance of a rectangle """
         print("{:s}".format("Bye rectangle..."))
+        type(self).number_of_instances -= 1
