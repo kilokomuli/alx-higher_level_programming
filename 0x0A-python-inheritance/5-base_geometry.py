@@ -3,4 +3,5 @@
 
 
 class BaseGeometry:
+    """ its an emppty class"""
     pass
