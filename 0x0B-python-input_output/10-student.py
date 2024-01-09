@@ -28,7 +28,7 @@ class Student:
         if attrs is None:
             return self.__dict__
 
-        new_dict ={}
+        new_dict = {}
         for item in attrs:
             try:
                 new_dict[item] = self.__dict__[item]
