@@ -1,0 +1,16 @@
+# The ``0-add_integer`` module
+
+# Test Case 1
+# Description: Test case with integers
+Input: 5, 3
+Expected Output: 8
+
+# Test Case 2
+# Description: Test case with a float and default value for b
+Input: 7.5
+Expected Output: 105
+
+# Test Case 3
+# Description: Test case with non-integer input
+Input: "abc", 3
+Expected Output: TypeError: a must be an integer or b must be an integer
