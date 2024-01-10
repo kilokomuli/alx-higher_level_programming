@@ -1,0 +1,28 @@
+Test case for 1-my_list.py
+
+import module
+>>> MyList = __import__('1-my_list').MyList
+>>>
+
+case 1: pass a list
+>>> a = [1, 9, 4]
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[1, 4, 9]
+>>>
+
+case 2: empty list
+>>> a = []
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[]
+>>>
+
+case 3: unique number
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
+>>>
