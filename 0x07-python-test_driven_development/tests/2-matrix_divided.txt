@@ -68,3 +68,8 @@ case 6: div must be non-zero:otherwise ZeroDivisionError is raised
     >>> print(matrix_divided(matrix, 0))
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
+
+case7: an empty list
+    >>> matrix = [[]]
+    >>> print(matrix_divided(matrix, 3))
+    [[]]
