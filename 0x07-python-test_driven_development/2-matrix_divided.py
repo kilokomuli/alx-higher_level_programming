@@ -2,11 +2,11 @@
 """Defines function matrix_divided which divides all elements of
 a matrix
 Attributes:
-    matrix and div"""
+    matrix_divided: divides all elements of a matrix"""
 
 
 def matrix_divided(matrix, div):
-    """Divodes all elements of a matrix
+    """Divides all elements of a matrix
     Args:
         matrix: list of lists of integers or floats
         div: number inter or a float
