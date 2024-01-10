@@ -12,11 +12,13 @@ def pascal_triangle(n):
 
     if n <= 0:
         return []
-    if n == 1:
-        return [[1]]
 
-    triangle = [[1]]
-    for i in range(n - 1):
-        triangle.append([x + n for x, n in zip(triangle[-1] + [0],
-                                             [0] + triangle[-1])])
-        return (triangle)
+    pascal = [[1]]
+    while len(pascal) != n:
+        tri = pascal[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        pascal.append(tmp)
+    return pascal
