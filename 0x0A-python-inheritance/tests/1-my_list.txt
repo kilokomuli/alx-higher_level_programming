@@ -1,35 +1,28 @@
-# The ``1-my_list.py`` module
-============================================
-How to use 1-my_list.py
-============================================
+Test case for 1-my_list.py
 
-This library has one function ``print_sorted()``
+import module
+>>> MyList = __import__('1-my_list').MyList
+>>>
 
-``print_sorted`` returns a list of integers sorted in ascending order.
+case 1: pass a list
+>>> a = [1, 9, 4]
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[1, 4, 9]
+>>>
 
-Importing the function:
-    >>> MyList = __import__('1-my_list').MyList
+case 2: empty list
+>>> a = []
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[]
+>>>
 
-Test if MyList is a subclass and/or instance of list.
-    >>> my_list = MyList()
-    >>> issubclass(MyList, list)
-    True
-
-    >>> my_list = MyList()
-    >>> isinstance(my_list, list)
-    True
-
-Test if 'print_sorted' is an attribute of class MyList.
-    >>> my_list = MyList()
-    >>> 'print_sorted' in dir(MyList)
-    True
-
-Test a list of positive numbers.
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
+case 3: unique number
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
+>>>
