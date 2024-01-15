@@ -127,10 +127,20 @@ class Rectangle(Base):
         Parameter:
         args:arguments
         kwargs: double pointer to a dictionary"""
-        if args is not None and len(args) is not 0:
+        if args !=  None and len(args) != 0:
             attr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list_atrr[i], args[i])
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns dictionary presentation of a rectangle"""
+        return {
+                'id' :self.id,
+                'width':self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
