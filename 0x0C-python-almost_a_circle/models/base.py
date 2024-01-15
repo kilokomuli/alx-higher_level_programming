@@ -43,3 +43,25 @@ class Base:
 
         with open(filename, 'w') as f:
             f.write(lists)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns a list of the JSON string representation json_string"""
+        if not json_string:
+            return []
+        else:
+            return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes
+        Args:
+           cls:class
+           dictionary: double pointer to a dictionary
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        if cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+
+        return(dummy)
