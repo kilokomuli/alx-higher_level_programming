@@ -1,2 +1,2 @@
 -- lists all rows of the table
-SELCECT * FROM first_table;
+SECECT * FROM first_table;
