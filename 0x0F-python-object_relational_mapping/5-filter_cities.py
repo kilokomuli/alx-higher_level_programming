@@ -9,12 +9,12 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    c.execute("SELECT * FROM `cities` as `c` \
-                INNER JOIN `states` as `s` \
-                   ON `c`.`state_id` = `s`.`id` \
-                ORDER BY `c`.`id`")
+    c.execute("SELECT cities.id, cities.name FROM cities\
+                INNER JOIN states ON cities.state_id = states.id\
+                WHERE states.name = %s", [sys.argv[4]])
+    j = []
     for cities in c.fetchall():
-        if cities[4] == sys.argv[4]:
-            print(", ".join([cities[2]]))
+        j.append(cities[1])
+    print(", ".join(j))
     c.close()
     db.close()
